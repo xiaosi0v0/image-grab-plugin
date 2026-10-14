@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "电商图片下载器",
+  "version": "1.0",
+  "description": "抓取淘宝京东拼多多商品详情图片，批量打包下载",
+  "permissions": ["activeTab", "downloads"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.taobao.com/*","*://*.jd.com/*","*://*.pinduoduo.com/*"],
+      "js": ["content.js"],
+      "css":["content.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
